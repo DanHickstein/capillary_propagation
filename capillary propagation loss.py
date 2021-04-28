@@ -11,14 +11,14 @@ dB_per_km = 1.85 lambda^2/a^3
 import numpy as np
 import matplotlib.pyplot as plt
 
-length = 10        # mm
+length    = 10     # mm
 wl_micron = 0.633  # um
 radius_mm = 0.025  # mm, *radius* not diameter!
 dB_per_km = 1.85 * wl_micron**2 / radius_mm**3
 
 print('For radius of %.6f mm and wavelength of %.3f micron:'%(radius_mm, wl_micron))
 print('dB per km: %.0f' % (dB_per_km))
-print('dB per km: %.3f' % (dB_per_km*1e-3))
+print('dB per  m: %.3f' % (dB_per_km*1e-3))
 print('dB per mm: %.6f' % (dB_per_km*1e-6))
 
 loss_dB = dB_per_km * 1e-6 * length
